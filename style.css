@@ -18,7 +18,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 280px 1fr;
+  height: 100svh;
 }
 
 header {
@@ -84,6 +85,10 @@ header {
 #user-avatar {
   height: 50px;
   width: 50px;
+}
+
+.greeting {
+  min-width: 315px;
 }
 
 .greeting,
