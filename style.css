@@ -1,0 +1,301 @@
+@import url(./modern-normalize.css);
+@import url(./reset.css);
+
+:root {
+  --pink: #ff0a70;
+  --gradient-orange: linear-gradient(62deg, #ff9999 0%, #f7ce68 100%);
+  --gradient-violet: linear-gradient(62deg, #f5f4f5 0%, #ebd8fd 100%);
+  --dark-violet: #ba77f8;
+  --black: #0e0e0e;
+  --grey: #7c7b7b;
+
+  font-size: 12px;
+}
+
+body {
+  color: var(--black);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  grid-column: 2 / 3;
+  background-color: white;
+  padding: 20px 60px 20px 30px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  flex-grow: 3;
+  gap: 15px;
+  padding: 0 0 0 5px;
+}
+
+#search-icon,
+#notifications-icon {
+  width: 30px;
+  height: 30px;
+}
+
+#search-bar {
+  background: #f5f4f5;
+  border: none;
+  border-radius: 20px;
+  height: 30px;
+  flex-grow: 1;
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--dark-violet);
+  }
+}
+
+.search > *,
+.user > * {
+  align-self: center;
+}
+
+.user {
+  display: flex;
+  gap: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#user-avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.greeting,
+.cta {
+  display: flex;
+  gap: 15px;
+}
+
+.greeting > *,
+.cta > * {
+  align-self: center;
+}
+
+#greeted-avatar {
+  height: 80px;
+  width: 80px;
+}
+
+#hi-there {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#greeted-user {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cta button {
+  background: #f7ce68;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar {
+  background: var(--gradient-orange);
+  grid-row: 1 / 3;
+  padding: 20px;
+
+  ul {
+    margin-top: 40px;
+  }
+}
+
+.menu,
+.preferences {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0 0 0 15px;
+
+  li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 4px 0;
+
+    &::before {
+      display: inline-block;
+      background-size: 25px 25px;
+      height: 25px;
+      width: 25px;
+      align-self: baseline;
+    }
+  }
+}
+
+#home::before {
+  content: url(./assets/home.svg);
+}
+
+#profile::before {
+  content: url(./assets/profile.svg);
+}
+
+#messages::before {
+  content: url(./assets/messages.svg);
+}
+
+#history::before {
+  content: url(./assets/history.svg);
+}
+
+#tasks::before {
+  content: url(./assets/tasks.svg);
+}
+
+#communities::before {
+  content: url(./assets/communities.svg);
+}
+
+#settings::before {
+  content: url(./assets/settings.svg);
+}
+
+#support::before {
+  content: url(./assets/support.svg);
+}
+
+#privacy::before {
+  content: url(./assets/privacy.svg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+#title {
+  font-size: 2rem;
+  color: white;
+}
+
+.article {
+  background: var(--gradient-violet);
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.projects-section {
+  padding: 20px;
+}
+
+#project-title,
+#announcement-title,
+#trending-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.project-cards {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card {
+  background-color: white;
+  height: 155px;
+  padding: 20px 50px 20px 30px;
+  border-radius: 10px;
+  border-left: 10px solid var(--pink);
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--grey);
+  }
+}
+
+.side-section {
+  padding: 20px 20px 20px 0;
+}
+
+.ann-title {
+  font-weight: 600;
+}
+
+.ann-text {
+  font-size: 0.75rem;
+  padding: 3px 0 3px 0;
+  color: var(--grey);
+}
+
+.trending {
+  margin: 20px 0 0 0;
+}
+
+.announcement-block,
+.trending-block {
+  background: white;
+  margin: 20px 0 0 0;
+  height: 220px;
+  width: 310px;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+.trending-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+hr {
+  border-top: none;
+  border-bottom: 1px solid pink;
+}
+
+.trend {
+  display: flex;
+  gap: 15px;
+}
+
+.trend-avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.trend-content {
+  color: var(--grey);
+}
