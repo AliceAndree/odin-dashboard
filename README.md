@@ -1,6 +1,6 @@
 # The Odin Project - Dashboard
 
-## This is an exercise from [The Odin Project](https://www.theodinproject.com/)'s Jullstack Javascript Path about CSS Grid.
+## This is an exercise from [The Odin Project](https://www.theodinproject.com/)'s Fullstack Javascript Path about CSS Grid.
 
 ## Here is my final design for this project :
 
